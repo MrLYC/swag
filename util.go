@@ -200,14 +200,7 @@ func Camelize(word string) (camelized string) {
 
 // ToFileName lowercases and underscores a go type name
 func ToFileName(name string) string {
-	in := split(name)
-	out := make([]string, 0, len(in))
-
-	for _, w := range in {
-		out = append(out, lower(w))
-	}
-
-	return strings.Join(out, "_")
+	return name
 }
 
 // ToCommandName lowercases and underscores a go type name
